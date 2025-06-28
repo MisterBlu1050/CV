@@ -104,12 +104,12 @@
     "technical": ["3D-printen", "ChatGPT Promptontwikkeling", "Ontwikkeling van mobiele applicaties"]
   },
   "jobMatch": {
-    "title": "Job Match Analyse",
-    "description": "Plak hieronder een functiebeschrijving om te zien hoe goed dit cv overeenkomt.",
-    "placeholder": "Plak hier de functiebeschrijving...",
-    "button": "Analyseer",
-    "loading": "Bezig met analyseren...",
-    "resultTitle": "Analyseresultaat:",
+    "title": "AI Job Matching",
+    "description": "Voer een functietitel of volledige functiebeschrijving in. De AI zal de match met het CV analyseren met recruitment en HR expertise.",
+    "placeholder": "Voer functietitel of volledige beschrijving hier in...",
+    "button": "Analyseren met AI",
+    "loading": "AI-analyse bezig...",
+    "resultTitle": "AI-analyse - Evaluatieresultaat:",
     "simulatedAnalysis": "**CV Match Analyse voor Bruno Mineo:**\n\n**Algemene match:** 85%\n\n**Sterke punten:**\n*   **Achtergrond in psychologie & HR:** Sterke afstemming op functies die inzicht in menselijk gedrag, analyse van de behoeften van de klant en het opbouwen van relaties vereisen.\n*   **Technische vaardigheden:** Ervaring met ChatGPT-ontwikkeling en mobiele applicaties is een belangrijke troef voor op technologie gerichte functies.\n*   **Talen:** Meertalige vaardigheden (Frans, Italiaans, Engels, Nederlands) zijn zeer waardevol voor internationale of klantgerichte functies.\n\n**Ontwikkelingsgebieden:**\n*   Hoewel het cv een overgang naar technologie laat zien, zouden meer specifieke voorbeelden van voltooide projecten of technische prestaties het profiel voor puur technische functies versterken."
   },
   "contact": {
