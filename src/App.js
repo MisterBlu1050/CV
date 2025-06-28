@@ -17,7 +17,7 @@ const LanguageSwitcher = () => {
 
   return (
     <div className="language-switcher">
-      <button onClick={() => changeLanguage('en')}>🇬🇧</button>
+      <button onClick={() => changeLanguage('en')}>en</button>
       <button onClick={() => changeLanguage('fr')}>🇫🇷</button>
       <button onClick={() => changeLanguage('nl')}>🇳🇱</button>
     </div>
@@ -111,7 +111,9 @@ function App() {
         <div className="header-text">
           <h1>{t('name')}</h1>
           <p>{t('jobTitle')}</p>
-          <p>{t('contact.email')} | {t('contact.phone')} | {t('contact.address')}</p>
+          <p>{t('contact.email')}</p>
+          <p>{t('contact.phone')}</p>
+          <p>{t('contact.address')}</p>
           <p>
             <a href={t('contact.linkedin')} target="_blank" rel="noopener noreferrer">{t('linkedin')}</a>
           </p>

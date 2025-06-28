@@ -2,8 +2,18 @@ import { GEMINI_CONFIG, getResumeContext, getAnalysisPrompt } from '../config/ge
 
 export class GeminiService {
   static async analyzeJobMatch(jobDescription) {
+    console.log('🔍 Vérification de la clé API...', {
+      hasKey: !!GEMINI_CONFIG.apiKey,
+      keyLength: GEMINI_CONFIG.apiKey ? GEMINI_CONFIG.apiKey.length : 0,
+      keyStart: GEMINI_CONFIG.apiKey ? GEMINI_CONFIG.apiKey.substring(0, 10) + '...' : 'Non définie'
+    });
+
     if (!GEMINI_CONFIG.apiKey) {
       throw new Error('Clé API Gemini manquante. Veuillez configurer REACT_APP_GEMINI_API_KEY dans votre fichier .env');
+    }
+
+    if (GEMINI_CONFIG.apiKey.length < 20) {
+      throw new Error('Clé API Gemini invalide. Vérifiez que votre clé API est complète dans le fichier .env');
     }
 
     const prompt = getAnalysisPrompt(jobDescription);
@@ -27,6 +37,11 @@ export class GeminiService {
       },
     };
 
+    console.log('🚀 Envoi de la requête à Gemini...', {
+      url: GEMINI_CONFIG.apiUrl,
+      hasContent: !!requestBody.contents[0].parts[0].text
+    });
+
     try {
       const response = await fetch(`${GEMINI_CONFIG.apiUrl}?key=${GEMINI_CONFIG.apiKey}`, {
         method: 'POST',
@@ -36,20 +51,42 @@ export class GeminiService {
         body: JSON.stringify(requestBody),
       });
 
+      console.log('📡 Réponse reçue:', {
+        status: response.status,
+        statusText: response.statusText,
+        ok: response.ok
+      });
+
       if (!response.ok) {
         const errorData = await response.json().catch(() => ({}));
-        throw new Error(`Erreur API Gemini: ${response.status} - ${errorData.error?.message || 'Erreur inconnue'}`);
+        console.error('❌ Erreur API détaillée:', errorData);
+        
+        if (response.status === 403) {
+          throw new Error('Clé API invalide ou quota dépassé. Vérifiez votre clé sur Google AI Studio.');
+        } else if (response.status === 429) {
+          throw new Error('Trop de requêtes. Attendez quelques minutes avant de réessayer.');
+        } else {
+          throw new Error(`Erreur API Gemini (${response.status}): ${errorData.error?.message || 'Erreur inconnue'}`);
+        }
       }
 
       const data = await response.json();
+      console.log('✅ Données reçues:', {
+        hasCandidates: !!data.candidates,
+        candidatesLength: data.candidates?.length || 0
+      });
       
       if (!data.candidates || !data.candidates[0] || !data.candidates[0].content) {
+        console.error('❌ Structure de réponse invalide:', data);
         throw new Error('Réponse invalide de l\'API Gemini');
       }
 
-      return data.candidates[0].content.parts[0].text;
+      const result = data.candidates[0].content.parts[0].text;
+      console.log('🎉 Analyse terminée avec succès!');
+      return result;
+      
     } catch (error) {
-      console.error('Erreur lors de l\'appel à Gemini:', error);
+      console.error('💥 Erreur lors de l\'appel à Gemini:', error);
       throw error;
     }
   }

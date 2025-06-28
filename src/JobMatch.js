@@ -10,6 +10,7 @@ const JobMatch = () => {
   const [analysisResult, setAnalysisResult] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState('');
+  const [showDebugInfo, setShowDebugInfo] = useState(false);
 
   const handleLoadExample = (exampleKey) => {
     setJobDescription(jobExamples[exampleKey]);
@@ -28,11 +29,13 @@ const JobMatch = () => {
     setAnalysisResult('');
 
     try {
+      console.log('🔄 Démarrage de l\'analyse...');
       // Try to use the real Gemini API first
       const analysis = await GeminiService.analyzeJobMatch(jobDescription);
       setAnalysisResult(analysis);
+      console.log('✅ Analyse terminée avec succès via Gemini API');
     } catch (error) {
-      console.warn('Erreur avec l\'API Gemini, utilisation de l\'analyse simulée:', error.message);
+      console.warn('⚠️ Erreur avec l\'API Gemini, utilisation de l\'analyse simulée:', error.message);
       
       // Fallback to simulated analysis if API fails
       const simulatedAnalysis = GeminiService.getSimulatedAnalysis();
@@ -43,6 +46,10 @@ const JobMatch = () => {
     } finally {
       setIsLoading(false);
     }
+  };
+
+  const handleDebugInfo = () => {
+    setShowDebugInfo(!showDebugInfo);
   };
 
   return (
@@ -86,6 +93,43 @@ const JobMatch = () => {
       {error && (
         <div className="job-match-error">
           ⚠️ {error}
+          <button 
+            onClick={handleDebugInfo}
+            style={{ 
+              marginLeft: '10px', 
+              padding: '4px 8px', 
+              fontSize: '12px',
+              background: 'transparent',
+              border: '1px solid #856404',
+              borderRadius: '4px',
+              cursor: 'pointer'
+            }}
+          >
+            {showDebugInfo ? 'Masquer' : 'Debug'}
+          </button>
+        </div>
+      )}
+
+      {showDebugInfo && (
+        <div style={{
+          padding: '12px',
+          backgroundColor: '#f8f9fa',
+          border: '1px solid #dee2e6',
+          borderRadius: '6px',
+          marginBottom: '20px',
+          fontSize: '12px',
+          fontFamily: 'monospace'
+        }}>
+          <strong>Informations de debug :</strong><br/>
+          • Clé API définie : {process.env.REACT_APP_GEMINI_API_KEY ? 'Oui' : 'Non'}<br/>
+          • Longueur de la clé : {process.env.REACT_APP_GEMINI_API_KEY?.length || 0} caractères<br/>
+          • Début de la clé : {process.env.REACT_APP_GEMINI_API_KEY?.substring(0, 15) || 'Non définie'}...<br/>
+          • URL API : {process.env.NODE_ENV === 'development' ? 'Mode développement' : 'Mode production'}<br/>
+          <br/>
+          <strong>Solutions :</strong><br/>
+          1. Vérifiez que le fichier .env existe à la racine du projet<br/>
+          2. Redémarrez l'application après avoir modifié .env<br/>
+          3. Vérifiez votre clé API sur <a href="https://makersuite.google.com/app/apikey" target="_blank" rel="noopener noreferrer">Google AI Studio</a>
         </div>
       )}
 
