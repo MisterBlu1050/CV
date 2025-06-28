@@ -1,38 +1,178 @@
+
+:root {
+  --dark-bg: #1a1a1a;
+  --card-bg: #2a2a2a;
+  --primary-text: #ffffff;
+  --secondary-text: #a0a0a0;
+  --accent-color: #00aaff;
+  --border-color: #444444;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--dark-bg);
+  color: var(--primary-text);
+  margin: 0;
+  padding: 0;
+}
+
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 2rem;
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin-bottom: 3rem;
+  padding: 2rem;
+  background-color: var(--card-bg);
+  border-radius: 15px;
+  border: 1px solid var(--border-color);
 }
 
-.App-link {
-  color: #61dafb;
+.profile-video-container {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 2rem;
+  border: 3px solid var(--accent-color);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.profile-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.header-text h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.header-text p {
+  color: var(--secondary-text);
+  margin: 0.5rem 0 0;
+}
+
+.header-text a {
+  color: var(--accent-color);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.header-text a:hover {
+  text-decoration: underline;
+}
+
+.language-switcher {
+  margin-left: auto;
+}
+
+.language-switcher button {
+  background: transparent;
+  color: var(--accent-color);
+  border: 1px solid var(--accent-color);
+  padding: 0.5rem 1rem;
+  margin-left: 0.5rem;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.language-switcher button:hover {
+  background: var(--accent-color);
+  color: var(--primary-text);
+}
+
+.App-body {
+  background-color: var(--card-bg);
+  padding: 2rem;
+  border-radius: 15px;
+  border: 1px solid var(--border-color);
+}
+
+.react-tabs__tab-list {
+  border-bottom: 2px solid var(--border-color);
+  margin: 0 0 2rem;
+}
+
+.react-tabs__tab {
+  color: var(--secondary-text);
+  font-weight: 600;
+  padding: 1rem 1.5rem;
+  border: none;
+  border-bottom: 3px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.react-tabs__tab--selected {
+  color: var(--accent-color);
+  border-bottom: 3px solid var(--accent-color);
+}
+
+section h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  color: var(--accent-color);
+}
+
+.experience-slide {
+  padding: 2rem;
+  text-align: center;
+}
+
+.carousel .control-arrow, .carousel.carousel-slider .control-arrow {
+    background: var(--accent-color) !important;
+    opacity: 1 !important;
+}
+
+.carousel .control-dots .dot {
+    background: var(--accent-color) !important;
+}
+
+.skills ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.skills li {
+  background-color: var(--dark-bg);
+  padding: 0.75rem 1.5rem;
+  border-radius: 25px;
+  font-weight: 600;
+  border: 1px solid var(--border-color);
+}
+
+textarea {
+  background-color: var(--dark-bg);
+  color: var(--primary-text);
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  padding: 1rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: var(--accent-color);
+  color: var(--primary-text);
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 25px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 1rem;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  opacity: 0.9;
 }

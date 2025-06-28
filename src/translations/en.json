@@ -1,0 +1,122 @@
+{
+  "name": "Bruno Mineo",
+  "jobTitle": "ChatGPT Developer & Psychological Counselor",
+  "summaryTitle": "Summary",
+  "experienceTitle": "Experience",
+  "educationTitle": "Education",
+  "skillsTitle": "Skills",
+  "jobMatchTitle": "Job Match",
+  "linkedin": "LinkedIn",
+  "portfolio": "Portfolio",
+  "summaryContent": "A dedicated and versatile professional with a background in psychology and human resources, now expanding into technology with a focus on ChatGPT development and mobile applications. Proven ability to bridge communication gaps, analyze needs, and create effective solutions in both human-centric and technical fields.",
+  "experience": [
+    {
+      "title": "ChatGPT Developer",
+      "company": "Complementary Independent",
+      "period": "Nov 2022 - Present",
+      "location": "Ixelles, Belgium",
+      "description": "Development of prompts on ChatGPT and construction of a mobile application in the psychological counseling sector."
+    },
+    {
+      "title": "Mediator (Bemiddelaar)",
+      "company": "The VDAB",
+      "period": "Feb 2023 - Dec 2023",
+      "location": "Brussels, Belgium",
+      "description": "Expertise in matching job seekers with vacancies, client needs analysis, digital tool deployment, and promoting sustainable work relationships."
+    },
+    {
+      "title": "Formlabs Wax Resin Fusion Advisor",
+      "company": "Plasmeo3D",
+      "period": "Jul 2019 - Oct 2023",
+      "location": "Ixelles, Belgium",
+      "description": ""
+    },
+    {
+      "title": "Jewelry Creator",
+      "company": "Plasmeo3D",
+      "period": "Jun 2015 - Oct 2023",
+      "location": "Ixelles, Belgium",
+      "description": ""
+    },
+    {
+      "title": "3D Printing Technician",
+      "company": "Plasmeo3D",
+      "period": "Jan 2014 - Oct 2023",
+      "location": "Ixelles, Belgium",
+      "description": ""
+    },
+    {
+      "title": "HR Assistant",
+      "company": "Travail & Vie ASBL",
+      "period": "Nov 2011 - Feb 2015",
+      "location": "Anderlecht, Belgium",
+      "description": "HR assistant in charge of employee management in a social enterprise."
+    },
+    {
+      "title": "Psychological Counselor",
+      "company": "psyconseil.com",
+      "period": "Jun 2008 - Dec 2014",
+      "location": "Ixelles, Belgium",
+      "description": "Brief therapy face-to-face and remotely."
+    },
+    {
+      "title": "Project Manager",
+      "company": "Badje ASBL",
+      "period": "May 2010 - Nov 2010",
+      "location": "Brussels, Belgium",
+      "description": "Integration of autistic children in extracurricular activities."
+    },
+    {
+      "title": "Night Educator",
+      "company": "IRSA - Royal Institute for Deaf and Blind",
+      "period": "Feb 2003 - Feb 2008",
+      "location": "Uccle, Belgium",
+      "description": "Night supervisor in a boarding school for blind and autistic children."
+    },
+    {
+      "title": "Pedagogical Coordinator",
+      "company": "Ecole du Quotidien",
+      "period": "Jan 2001 - Jan 2003",
+      "location": "Brussels, Belgium",
+      "description": "Pedagogical, theoretical and administrative coordination of a team of teachers."
+    },
+    {
+      "title": "Specialized Education Teacher",
+      "company": "Ecole du Quotidien",
+      "period": "Sep 1996 - Jan 2003",
+      "location": "Brussels, Belgium",
+      "description": "Pedagogical support for psychotic children in French, mathematics and music."
+    }
+  ],
+  "education": [
+    {
+      "institution": "Institut Libre Marie Haps",
+      "degree": "Bachelor's degree, Clinical Psychology",
+      "period": "Sep 1993 - Jun 1996"
+    }
+  ],
+  "skills": {
+    "languagesTitle": "Languages",
+    "professionalTitle": "Professional",
+    "technicalTitle": "Technical",
+    "languages": ["French (Native)", "Italian (Native)", "English (Professional)", "Dutch (Professional)"],
+    "professional": ["Human Resources", "Administration", "Recruitment", "Translation"],
+    "technical": ["3D Printing", "ChatGPT Prompt Development", "Mobile Application Development"]
+  },
+  "jobMatch": {
+    "title": "Job Match Analysis",
+    "description": "Paste a job description below to see how well this resume matches.",
+    "placeholder": "Paste job description here...",
+    "button": "Analyze",
+    "loading": "Analyzing...",
+    "resultTitle": "Analysis Result:",
+    "simulatedAnalysis": "**Resume Match Analysis for Bruno Mineo:**\n\n**Overall Match:** 85%\n\n**Strengths:**\n*   **Psychology & HR Background:** Strong alignment with roles requiring understanding of human behavior, client needs analysis, and relationship building.\n*   **Technical Skills:** Experience with ChatGPT development and mobile applications is a significant asset for tech-focused roles.\n*   **Languages:** Multilingual capabilities (French, Italian, English, Dutch) are highly valuable for international or customer-facing positions.\n\n**Areas for Development:**\n*   While the resume shows a transition into tech, more specific examples of completed projects or technical achievements would strengthen the profile for purely technical roles."
+  },
+  "contact": {
+      "email": "mineobruno@hotmail.com",
+      "phone": "+32 473 330 525",
+      "address": "Avenue de la Couronne 193, Ixelles 1050",
+      "linkedin": "https://www.linkedin.com/in/mineo-bruno/",
+      "portfolio": "www.instagram.com/plasmeo3d/"
+  }
+}

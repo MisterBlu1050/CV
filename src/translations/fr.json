@@ -1,0 +1,122 @@
+{
+  "name": "Bruno Mineo",
+  "jobTitle": "Développeur ChatGPT & Conseiller Psychologique",
+  "summaryTitle": "Résumé",
+  "experienceTitle": "Expérience",
+  "educationTitle": "Éducation",
+  "skillsTitle": "Compétences",
+  "jobMatchTitle": "Analyse de Poste",
+  "linkedin": "LinkedIn",
+  "portfolio": "Portfolio",
+  "summaryContent": "Un professionnel dévoué et polyvalent avec une formation en psychologie et en ressources humaines, qui s'oriente maintenant vers la technologie avec un focus sur le développement ChatGPT et les applications mobiles. Capacité avérée à combler les lacunes de communication, à analyser les besoins et à créer des solutions efficaces dans les domaines tant humains que techniques.",
+  "experience": [
+    {
+      "title": "Développeur chatgpt",
+      "company": "Indépendant complémentaire",
+      "period": "Nov 2022 - Présent",
+      "location": "Ixelles, Belgique",
+      "description": "Développement de prompts sur chatgpt et construction d'une application mobile dans le secteur du conseil psychologique."
+    },
+    {
+      "title": "Médiateur (Bemiddelaar)",
+      "company": "Le VDAB",
+      "period": "Fév 2023 - Déc 2023",
+      "location": "Bruxelles, Belgique",
+      "description": "Expertise dans la mise en relation des demandeurs d'emploi avec les postes vacants, analyse des besoins des clients, déploiement d'outils numériques et promotion de relations de travail durables."
+    },
+    {
+      "title": "Conseiller en fusion de résines de cire Formlabs",
+      "company": "Plasmeo3D",
+      "period": "Juil 2019 - Oct 2023",
+      "location": "Ixelles, Belgique",
+      "description": ""
+    },
+    {
+      "title": "Créateur de bijoux",
+      "company": "Plasmeo3D",
+      "period": "Juin 2015 - Oct 2023",
+      "location": "Ixelles, Belgique",
+      "description": ""
+    },
+    {
+      "title": "Technicien en impression 3D",
+      "company": "Plasmeo3D",
+      "period": "Jan 2014 - Oct 2023",
+      "location": "Ixelles, Belgique",
+      "description": ""
+    },
+    {
+      "title": "Assistant RH",
+      "company": "Travail & Vie ASBL",
+      "period": "Nov 2011 - Fév 2015",
+      "location": "Anderlecht, Belgique",
+      "description": "Assistant RH en charge de la gestion des salariés dans une entreprise sociale."
+    },
+    {
+      "title": "Conseiller en psychologie",
+      "company": "psyconseil.com",
+      "period": "Juin 2008 - Déc 2014",
+      "location": "Ixelles, Belgique",
+      "description": "Thérapie brève en face à face et à distance."
+    },
+    {
+      "title": "Chef de projet",
+      "company": "Badje ASBL",
+      "period": "Mai 2010 - Nov 2010",
+      "location": "Bruxelles, Belgique",
+      "description": "Intégration des enfants autistes dans les activités parascolaires."
+    },
+    {
+      "title": "Educateur de nuit",
+      "company": "IRSA - Institut Royal pour Sourds et Aveugles",
+      "period": "Fév 2003 - Fév 2008",
+      "location": "Uccle, Belgique",
+      "description": "Surveillant de nuit dans un internat pour enfants aveugles et autistes."
+    },
+    {
+      "title": "Coordinateur pédagogique",
+      "company": "Ecole du Quotidien",
+      "period": "Jan 2001 - Jan 2003",
+      "location": "Bruxelles, Belgique",
+      "description": "Coordination pédagogique, théorique et administrative d'une équipe d'enseignants."
+    },
+    {
+      "title": "Enseignant en éducation spécialisée",
+      "company": "Ecole du Quotidien",
+      "period": "Sep 1996 - Jan 2003",
+      "location": "Bruxelles, Belgique",
+      "description": "Soutien pédagogique pour les enfants psychotiques, en français, en mathématiques et en musique."
+    }
+  ],
+  "education": [
+    {
+      "institution": "Institut Libre Marie Haps",
+      "degree": "Baccalauréat, Psychologie clinique",
+      "period": "Sep 1993 - Juin 1996"
+    }
+  ],
+  "skills": {
+    "languagesTitle": "Langues",
+    "professionalTitle": "Professionnelles",
+    "technicalTitle": "Techniques",
+    "languages": ["Français (Natif)", "Italien (Natif)", "Anglais (Professionnel)", "Néerlandais (Professionnel)"],
+    "professional": ["Ressources Humaines", "Administration", "Recrutement", "Traduction"],
+    "technical": ["Impression 3D", "Développement de Prompts ChatGPT", "Développement d'Applications Mobiles"]
+  },
+  "jobMatch": {
+    "title": "Analyse de Correspondance de Poste",
+    "description": "Collez une description de poste ci-dessous pour voir à quel point ce CV correspond.",
+    "placeholder": "Collez la description de poste ici...",
+    "button": "Analyser",
+    "loading": "Analyse en cours...",
+    "resultTitle": "Résultat de l'analyse :",
+    "simulatedAnalysis": "**Analyse de Correspondance de CV pour Bruno Mineo:**\n\n**Correspondance Globale :** 85%\n\n**Points Forts :**\n*   **Formation en Psychologie & RH :** Forte adéquation avec les rôles nécessitant une compréhension du comportement humain, l'analyse des besoins des clients et la création de relations.\n*   **Compétences Techniques :** L'expérience en développement ChatGPT et en applications mobiles est un atout majeur pour les rôles axés sur la technologie.\n*   **Langues :** Les capacités multilingues (français, italien, anglais, néerlandais) sont très précieuses pour les postes internationaux ou en contact avec la clientèle.\n\n**Axes de Développement :**\n*   Bien que le CV montre une transition vers la technologie, des exemples plus spécifiques de projets terminés ou de réalisations techniques renforceraient le profil pour des rôles purement techniques."
+  },
+  "contact": {
+      "email": "mineobruno@hotmail.com",
+      "phone": "+32 473 330 525",
+      "address": "Avenue de la Couronne 193, Ixelles 1050",
+      "linkedin": "https://www.linkedin.com/in/mineo-bruno/",
+      "portfolio": "www.instagram.com/plasmeo3d/"
+  }
+}
