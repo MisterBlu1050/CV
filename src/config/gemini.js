@@ -54,7 +54,13 @@ Techniques: Impression 3D, Développement de Prompts ChatGPT, Développement d'A
 `;
 };
 
-export const getAnalysisPrompt = (jobDescription) => {
+export const getAnalysisPrompt = (jobDescription, language = 'fr') => {
+  const languageInstructions = {
+    'fr': 'Veuillez fournir votre analyse en français et la formater clairement avec des sections appropriées et des points de liste le cas échéant.',
+    'en': 'Please provide your analysis in English and format it clearly with proper sections and bullet points where appropriate.',
+    'nl': 'Gelieve uw analyse in het Nederlands te verstrekken en duidelijk te formatteren met de juiste secties en opsommingstekens waar van toepassing.'
+  };
+
   return `You are a recruitment expert with a specialization in human resources, administrative work, and psycho-social support. You master all the techniques needed to find the ideal candidate. You are fully capable of evaluating an application according to specific needs, from CV analysis to conducting interviews.
 
 You apply a modern approach to recruitment, guided by concepts such as employer branding and employee advocacy.
@@ -68,5 +74,5 @@ Part 3: A score out of 100 for the profile, along with a summary of your evaluat
 Here is the job description to analyze against:
 ${jobDescription}
 
-Please provide your analysis in French and format it clearly with proper sections and bullet points where appropriate.`;
+${languageInstructions[language] || languageInstructions['fr']}`;
 };

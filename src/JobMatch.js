@@ -4,7 +4,7 @@ import { GeminiService } from './services/GeminiService';
 import './JobMatch.css';
 
 const JobMatch = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const [jobDescription, setJobDescription] = useState('');
   const [analysisResult, setAnalysisResult] = useState('');
   const [isLoading, setIsLoading] = useState(false);
@@ -24,14 +24,14 @@ const JobMatch = () => {
     try {
       console.log('🔄 Démarrage de l\'analyse...');
       // Try to use the real Gemini API first
-      const analysis = await GeminiService.analyzeJobMatch(jobDescription);
+      const analysis = await GeminiService.analyzeJobMatch(jobDescription, i18n.language);
       setAnalysisResult(analysis);
       console.log('✅ Analyse terminée avec succès via Gemini API');
     } catch (error) {
       console.warn('⚠️ Erreur avec l\'API Gemini, utilisation de l\'analyse simulée:', error.message);
       
       // Fallback to simulated analysis if API fails
-      const simulatedAnalysis = GeminiService.getSimulatedAnalysis();
+      const simulatedAnalysis = GeminiService.getSimulatedAnalysis(i18n.language);
       setAnalysisResult(simulatedAnalysis);
       
       // Show a warning to the user about using simulated analysis
