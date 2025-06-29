@@ -29,4 +29,12 @@ jobs:
             git pull
             npm ci --omit=dev --legacy-peer-deps
             npm run build
-            pm2 restart cv-app
+
+            # 1) Supprime l'ancien process s'il existe
+            pm2 delete cv-app || true
+
+            # 2) Démarre le serveur statique
+            pm2 start serve --name cv-app -- -s build -l 3000
+
+            # 3) Sauvegarde la configuration PM2
+            pm2 save
