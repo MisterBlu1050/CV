@@ -1,26 +1,32 @@
 name: Deploy to VM
-on: [push]
+
+on:
+  push:
+    branches:
+      - master  # ou la branche que tu utilises
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
+
     steps:
-    - uses: actions/checkout@v4
+      - name: Checkout code
+        uses: actions/checkout@v4
 
-    - name: Build site
-      run: |
-        npm ci
-        npm run build
-
-    - name: Upload to server & restart
-      uses: appleboy/ssh-action@v1
-      with:
-        host: ${{ secrets.VM_HOST }}
-        username: ${{ secrets.VM_USER }}
-        key: ${{ secrets.SSH_KEY }}
-        script: |
-          cd ${{ secrets.VM_PATH }}
-          git pull
-          npm ci --omit=dev
+      - name: Install dependencies & build
+        run: |
+          npm ci --legacy-peer-deps
           npm run build
-          pm2 restart cv-app
+
+      - name: Deploy to server
+        uses: appleboy/ssh-action@v1
+        with:
+          host: ${{ secrets.VM_HOST }}
+          username: ${{ secrets.VM_USER }}
+          key: ${{ secrets.SSH_KEY }}
+          script: |
+            cd ${{ secrets.VM_PATH }}
+            git pull
+            npm ci --omit=dev --legacy-peer-deps
+            npm run build
+            pm2 restart cv-app
