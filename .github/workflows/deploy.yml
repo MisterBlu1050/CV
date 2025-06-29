@@ -28,15 +28,24 @@ jobs:
           key: ${{ secrets.SSH_KEY }}
           script: |
             cd ${{ secrets.VM_PATH }}
+
+            # Injecte la clé Gemini dans l'environnement de la VM
+            export REACT_APP_GEMINI_API_KEY=${{ secrets.REACT_APP_GEMINI_API_KEY }}
+
+            # Récupère la dernière version du code
             git pull
+
+            # Installe les dépendances sans les devDependencies
             npm ci --omit=dev --legacy-peer-deps
+
+            # Rebuild le front en production avec la vraie clé
             npm run build
 
-            # 1) Supprime l'ancien process s'il existe
+            # 1) Supprime l'ancien process PM2 s'il existe
             pm2 delete cv-app || true
 
-            # 2) Démarre le serveur statique
+            # 2) Démarre le serveur statique sur le build généré
             pm2 start serve --name cv-app -- -s build -l 3000
 
-            # 3) Sauvegarde la configuration PM2
+            # 3) Sauvegarde la configuration PM2 pour le redémarrage automatique
             pm2 save
