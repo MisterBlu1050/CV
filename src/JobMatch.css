@@ -21,32 +21,6 @@
   line-height: 1.5;
 }
 
-.job-match-examples {
-  margin-bottom: 10px;
-}
-
-.job-match-examples strong {
-  color: #2c3e50;
-  margin-right: 10px;
-}
-
-.job-match-example-button {
-  margin: 5px;
-  padding: 6px 12px;
-  background-color: #f8f9fa;
-  border: 1px solid #dee2e6;
-  border-radius: 4px;
-  cursor: pointer;
-  font-size: 12px;
-  transition: all 0.2s ease;
-}
-
-.job-match-example-button:hover {
-  background-color: #e9ecef;
-  border-color: #adb5bd;
-  transform: translateY(-1px);
-}
-
 .job-match-textarea {
   width: 100%;
   padding: 15px;

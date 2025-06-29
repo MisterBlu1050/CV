@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { GeminiService } from './services/GeminiService';
-import { jobExamples } from './data/jobExamples';
 import './JobMatch.css';
 
 const JobMatch = () => {
@@ -11,12 +10,6 @@ const JobMatch = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState('');
   const [showDebugInfo, setShowDebugInfo] = useState(false);
-
-  const handleLoadExample = (exampleKey) => {
-    setJobDescription(jobExamples[exampleKey]);
-    setError('');
-    setAnalysisResult('');
-  };
 
   const handleAnalyze = async () => {
     if (!jobDescription.trim()) {
@@ -58,18 +51,6 @@ const JobMatch = () => {
       <p className="job-match-description">{t('jobMatch.description')}</p>
       
       <div style={{ marginBottom: '20px' }}>
-        <div className="job-match-examples">
-          <strong>Exemples rapides :</strong>
-          {Object.keys(jobExamples).map((key) => (
-            <button
-              key={key}
-              onClick={() => handleLoadExample(key)}
-              className="job-match-example-button"
-            >
-              {key}
-            </button>
-          ))}
-        </div>
         <textarea 
           rows="8" 
           className="job-match-textarea"
